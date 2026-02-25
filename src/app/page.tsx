@@ -13,6 +13,12 @@ export default function Home() {
         <div className="max-w-6xl mx-auto flex flex-col gap-20">
 
           {/* HERO */}
+                      <div className="flex items-center justify-center">
+              <h2 className="text-5xl sm:text-6xl md:text-8xl font-black leading-[1.05] tracking-tight text-center">
+                <span className="block text-white">Junior</span>
+                <span className="block text-red-600">Car</span>
+              </h2>
+            </div>
           <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center">
 
             <div className="text-center md:text-left">
@@ -43,15 +49,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-
-            <div className="flex items-center justify-center">
-              <h2 className="text-5xl sm:text-6xl md:text-8xl font-black leading-[1.05] tracking-tight text-center">
-                <span className="block text-white">Junior</span>
-                <span className="block text-red-600">Car</span>
-              </h2>
-            </div>
-
-          </div>
+           </div>
 
           {/* SERVIÇOS */}
           <div>
