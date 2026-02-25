@@ -2,34 +2,36 @@
 
 /* ====== PALETA GLOBAL ====== */
 :root {
-  --background: #111111;          /* fundo quase preto */
-  --background-gradient: linear-gradient(180deg, #111111 0%, #1a1a1a 100%); /* fundo suave */
-  --card: #1b1b1f;                /* cards um pouco mais claros */
-  --card-hover: #222227;          /* cards em hover */
-  --border: transparent;           /* sem divisórias */
-  --foreground: #f3f4f6;          /* texto principal */
-  --muted: #9ca3af;               /* texto secundário */
-  --primary: #dc2626;             /* vermelho para botões */
-  --primary-hover: #b91c1c;       /* hover botão */
+  --background: #111111;
+  --background-gradient: linear-gradient(180deg, #111111 0%, #1a1a1a 100%);
+  --card: #1b1b1f;
+  --card-hover: #222227;
+  --foreground: #f3f4f6;
+  --muted: #9ca3af;
+  --primary: #dc2626;
+  --primary-hover: #b91c1c;
 }
 
-/* ====== BASE ====== */
+/* ====== BASE (FIX DEFINITIVO MOBILE) ====== */
 html,
 body {
   height: 100%;
   font-family: Inter, system-ui, sans-serif;
-  background: var(--background-gradient);
+  background-color: #111111; /* cor sólida evita bug mobile */
   color: var(--foreground);
   margin: 0;
   padding: 0;
 }
 
+#__next {
+  min-height: 100%;
+}
+
 /* ====== SEÇÕES ====== */
 section {
-  background: var(--background-gradient); /* fundo contínuo */
   color: var(--foreground);
   padding: 4rem 1.5rem;
-  border: none; /* remove todas as divisões */
+  border: none;
 }
 
 /* ====== CARDS ====== */
@@ -39,13 +41,13 @@ section {
   padding: 2rem;
   color: var(--foreground);
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.5); /* sombra sutil */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
 .card:hover {
   background-color: var(--card-hover);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.7); /* sombra maior no hover */
-  transform: translateY(-2px); /* leve elevação */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+  transform: translateY(-2px);
 }
 
 /* ====== BOTÕES ====== */

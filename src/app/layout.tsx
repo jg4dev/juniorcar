@@ -17,19 +17,19 @@ export default function RootLayout({
   children: ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className="bg-neutral-900">
-      <body className={`${inter.className} bg-neutral-900 min-h-screen flex flex-col`}>
-        
+    <html lang="pt-BR" className="bg-[#111111] h-full">
+      <body
+        className={`${inter.className} bg-[#111111] min-h-screen flex flex-col`}
+      >
         <Navbar />
 
         <PageTransition>
-          <main className="flex-1">
+          <main className="flex-1 w-full">
             {children}
           </main>
         </PageTransition>
 
         <Footer />
-
       </body>
     </html>
   );
